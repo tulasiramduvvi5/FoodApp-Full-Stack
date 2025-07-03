@@ -1,0 +1,117 @@
+.place-order {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 100px;
+  color: var(--text-primary);
+  padding: 0 5%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.place-order-left {
+  width: 100%;
+  max-width: 520px;
+}
+
+.place-order-left .title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--theme-color);
+  border-left: 5px solid var(--theme-color);
+  padding-left: 12px;
+}
+
+.place-order-left input {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #fffaf5;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.place-order-left input:focus {
+  border-color: var(--theme-color);
+  box-shadow: 0 0 5px rgba(255, 46, 46, 0.3);
+}
+
+.place-order-left .multi-fields {
+  display: flex;
+  gap: 12px;
+}
+
+/* Right Section */
+.place-order-right {
+  width: 100%;
+  max-width: max(40%, 520px);
+  background-color: #fffaf5;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* Cart Summary */
+.cart-total {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.cart-total h2 {
+  color: var(--theme-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  color: #444;
+  font-size: 1.6rem;
+}
+
+.cart-total hr {
+  margin: 10px 0;
+  background-color: #ddd;
+  height: 1px;
+  border: none;
+}
+
+.cart-total button {
+  border: none;
+  color: white;
+  background-color: var(--theme-color);
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cart-total button:hover {
+  background-color: #e02121;
+}
+
+/* Mobile View */
+@media (max-width: 750px) {
+  .place-order {
+    flex-direction: column;
+  }
+
+  .place-order-right {
+    margin-top: 30px;
+  }
+
+  .place-order-left .multi-fields {
+    flex-direction: column;
+  }
+}

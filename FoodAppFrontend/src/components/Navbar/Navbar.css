@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 6vw;
+    background-color: #fffaf5; /* Cream background */
+    border-bottom: 1px solid #f0e8e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    width: 160px;
+    object-fit: contain;
+    filter: brightness(1);
+}
+
+.navbar .profile {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--theme-color);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(255, 46, 46, 0.2);
+}
+
+.navbar .profile:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(255, 46, 46, 0.3);
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}

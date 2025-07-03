@@ -1,0 +1,102 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_pic.avif') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 16px;
+    margin-inline: 10px;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.55)); /* softer cream-light to dark */
+    border-radius: 16px;
+    z-index: 0;
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    z-index: 1;
+    animation: fadeIn 2s ease;
+}
+
+.header-contents h2 {
+    font-weight: 600;
+    font-size: max(3.5vw, 1.8rem);
+    color: #ffffff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.header-contents p {
+    color: #fdfdfd;
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 1.5;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.header-contents button {
+    border: none;
+    color: white;
+    padding: 1vw 2.3vw;
+    background-color: var(--theme-color);
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.1vw;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-contents button:hover {
+    background-color: #e02121;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1050px) {
+    .header-contents {
+        max-width: 60%;
+    }
+    .header-contents p {
+        font-size: 1.2vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-contents {
+        max-width: 80%;
+        gap: 2vw;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

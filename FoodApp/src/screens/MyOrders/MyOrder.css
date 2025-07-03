@@ -1,0 +1,96 @@
+.my-orders {
+  margin-top: 100px;
+  padding: 0 5%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.my-orders h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #222;
+  border-left: 5px solid var(--theme-color);
+  padding-left: 12px;
+}
+
+.my-orders .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Order Card */
+.my-orders-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px 20px;
+  background-color: #fffaf5;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.my-orders-order:hover {
+  box-shadow: 0 2px 10px rgba(255, 46, 46, 0.12);
+}
+
+.my-orders-order img {
+  width: 44px;
+}
+
+.my-orders-order p {
+  margin: 0;
+  font-weight: 500;
+  flex: 1;
+  color: #444;
+  line-height: 1.4;
+}
+
+.my-orders-order p span {
+  color: green;
+  margin-right: 5px;
+  font-size: 1.6rem;
+}
+
+.my-orders-order p b {
+  text-transform: capitalize;
+}
+
+/* Track Button */
+.my-orders-order button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--theme-color);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.my-orders-order button:hover {
+  background-color: #e02121;
+}
+
+@media (max-width: 768px) {
+  .my-orders-order {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .my-orders-order p,
+  .my-orders-order button {
+    width: 100%;
+  }
+
+  .my-orders-order button {
+    text-align: center;
+  }
+}
