@@ -1,7 +1,7 @@
 const orderModel = require('../models/orderModel');
 const userModel = require('../models/userModel');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); 
-const frontend_url = 'https://food-app-frontend-rxg6.onrender.com';
+const frontend_url = 'https://foodapp-full-stack-1.onrender.com';
 
 const placeOrder = async (req, res) => {
   try {
